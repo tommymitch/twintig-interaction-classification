@@ -1,9 +1,10 @@
 # twintig-tap-gesture-classification
 
-A small 1D CNN that classifies hand gestures (taps of different strengths, plus
-mid-air movements) from accelerometer data recorded with a Twintig sensor.
-`train_kfold.py` trains it on 6 classes and evaluates it with
-5-fold stratified cross-validation.
+A small 1D CNN that classifies hand gestures from accelerometer data recorded
+with a Twintig sensor. There are six classes: taps on three silicone surfaces of
+different hardness (soft, medium and hard), and three mid-air movements (a tap,
+an upward swipe, and random hand movement). `train_kfold.py` trains the model
+and evaluates it with 5-fold stratified cross-validation.
 
 ## Hardware and data capture
 The data was recorded with a **Twintig Carpus** inertial sensor connected over
@@ -42,9 +43,9 @@ It uses CUDA if available, otherwise the CPU. Plots open in windows
 ## Classes
 | Label | Class |
 |---|---|
-| 0 | Soft tap |
-| 1 | Medium tap |
-| 2 | Hard tap |
+| 0 | Tap on soft silicone |
+| 1 | Tap on medium silicone |
+| 2 | Tap on hard silicone |
 | 3 | AirTap (tapping in mid-air) |
 | 4 | TapUp (mid-air upward swipe) |
 | 5 | Air (hand moving randomly in free space) |
