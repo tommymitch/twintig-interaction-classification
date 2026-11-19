@@ -2,7 +2,7 @@
 
 A small 1D CNN that classifies hand gestures (taps of different strengths, plus
 mid-air movements) from accelerometer data recorded with a Twintig sensor.
-`script3-stratified-kfold.py` trains it on 6 classes and evaluates it with
+`train_kfold.py` trains it on 6 classes and evaluates it with
 5-fold stratified cross-validation.
 
 ## Hardware and data capture
@@ -25,7 +25,7 @@ The extraction was done by `OpenAndWrite.py` and `OpenAndWriteNoTaps.py` in the
 `18CaptureAndAnalyse` folder of the wider project.
 
 ## Files
-- `script3-stratified-kfold.py` – model, training, and evaluation
+- `train_kfold.py` – model, training, and evaluation
 - `numbersSoftMediumHardBigAirTapsBiggerTapupAir.csv` – dataset (432 rows, 72 per class)
   - column 0: class label (0–5)
   - remaining 4837 columns: accelerometer magnitude (g), one 150 ms window
@@ -34,7 +34,7 @@ The extraction was done by `OpenAndWrite.py` and `OpenAndWriteNoTaps.py` in the
 ## Running
 ```
 pip install -r requirements.txt
-python script3-stratified-kfold.py
+python train_kfold.py
 ```
 It uses CUDA if available, otherwise the CPU. Plots open in windows
 (close each one to continue).
