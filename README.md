@@ -1,4 +1,4 @@
-# twintig-tap-gesture-classification
+# twintig-interaction-classification
 
 A small 1D CNN that classifies hand gestures from accelerometer data recorded
 with a Twintig sensor. There are six classes: taps on three silicone surfaces of
